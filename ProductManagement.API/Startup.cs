@@ -49,7 +49,11 @@ namespace ProductManagement.API
             }).AddEntityFrameworkStores<ProductManagementContext>().AddDefaultTokenProviders();
 
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductImageRepository, ProductImageRepository>();
+            services.AddScoped<IImageRepository, ImageRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductManager, ProductManager>();
+            services.AddScoped<IProductImageManager, ProductImageManager>();
             services.AddScoped<IAccountManager, AccountManager>();
 
             services.AddAuthentication(options =>

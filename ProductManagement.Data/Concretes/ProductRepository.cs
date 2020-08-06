@@ -43,8 +43,8 @@ namespace ProductManagement.Data.Concretes
 
             if (product != null)
             {
-                product.Image = productInput.Image;
-                product.Name = productInput.Name;
+                product.WarehouseId = productInput.WarehouseId;
+                product.Description = productInput.Description;
                 product.Price = productInput.Price;
                 _context.SaveChanges();
             }

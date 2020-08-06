@@ -20,8 +20,8 @@ namespace ProductManagement.Service.Concretes
         public void Add(ProductDTO productDto)
         {
             var product = new Product();
-            product.Name = productDto.Name;
-            product.Image = productDto.Image;
+            product.Description = productDto.Description;
+            product.WarehouseId = productDto.WarehouseId;
             product.Price = productDto.Price;
             _productRepository.Add(product);
         }
@@ -35,8 +35,8 @@ namespace ProductManagement.Service.Concretes
         {
             var product = new Product();
             product.Id = productDto.Id;
-            product.Name = productDto.Name;
-            product.Image = productDto.Image;
+            product.Description = productDto.Description;
+            product.WarehouseId = productDto.WarehouseId;
             product.Price = productDto.Price;
             _productRepository.Update(product);
         }
@@ -50,8 +50,8 @@ namespace ProductManagement.Service.Concretes
             {
                 var productDto = new ProductDTO();
                 productDto.Id = product.Id;
-                productDto.Name = product.Name;
-                productDto.Image = product.Image;
+                productDto.Description = product.Description;
+                productDto.WarehouseId = product.WarehouseId;
                 productDto.Price = product.Price;
                 productsDto.Add(productDto);
             }
@@ -64,8 +64,8 @@ namespace ProductManagement.Service.Concretes
             var product = _productRepository.GetById(id);
             var productDto = new ProductDTO();
             productDto.Id = product.Id;
-            productDto.Name = product.Name;
-            productDto.Image = product.Image;
+            productDto.Description = product.Description;
+            productDto.WarehouseId = product.WarehouseId;
             productDto.Price = product.Price;
 
             return productDto;
